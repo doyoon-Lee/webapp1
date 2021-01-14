@@ -41,7 +41,14 @@
 						<a class="btn btn-info btn-sm" 
 						href="method2">객체전달</a>
 					</div>
-				</div>											
+				</div>		
+				<div class="sector">
+					<h5>Model 객체를 이용한 컬렉션 전달</h5>
+					<div>
+						<a class="btn btn-info btn-sm" 
+						href="method3">컬렉션전달</a>
+					</div>
+				</div>									
 			</div>
 		</div>
 	</div>

@@ -48,7 +48,7 @@ public class Ch07Controller {
 	
 	@GetMapping("/method3")
 	public String method3(Model model) {
-		List<Ch07Board> boardList = new ArrayList<>();
+		List<Ch07Board> list = new ArrayList<>();
 		for(int i=1;i<=10;i++) {
 			Ch07Board board = new Ch07Board();
 			board.setNo(i);
@@ -56,9 +56,9 @@ public class Ch07Controller {
 			board.setContent("과제 싫어요"+i);
 			board.setWriter("김자바"+i);
 			board.setDate(new Date());
-			boardList.add(board);
+			list.add(board);
 		}
-		model.addAttribute("boardList",boardList);
+		model.addAttribute("boardList",list);
 		return "ch07/el";
 	}
 }

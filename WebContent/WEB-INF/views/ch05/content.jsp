@@ -29,10 +29,10 @@
 			<%-- 공통 메뉴 --%>
 			<div class="content">
 				<div class="sector">
-					<h5>GET방식 데이터 전달</h5>
+					<h5>헤더값 읽기</h5>
 					<div>
 						<a class="btn btn-info btn-sm" 
-						href="method1?param1=문자열&param2=5&param3=3.14&param4=true&param5=2021-01-14">데이터 전달</a>
+						href="method1">브라우저 정보 얻기</a>
 					</div>
 				</div>
 				

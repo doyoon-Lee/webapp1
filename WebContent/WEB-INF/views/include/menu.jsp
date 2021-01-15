@@ -8,6 +8,7 @@
 		<li class="chapter">Ch03. <a href="<%=application.getContextPath()%>/ch03/content">Request Parameter</a></li>		
 		<li class="chapter">Ch05. <a href="<%=application.getContextPath()%>/ch05/content">Header / Cookie</a></li>		
 		<li class="chapter">Ch06. <a href="<%=application.getContextPath()%>/ch06/content">Forward / Redirect</a></li>
-		<li class="chapter">Ch07. <a href="<%=application.getContextPath()%>/ch07/content">Data delivery</a></li>
+		<li class="chapter">Ch07. <a href="<%=application.getContextPath()%>/ch07/content">Data delivery(Model 이용)</a></li>
+		<li class="chapter">Ch08. <a href="<%=application.getContextPath()%>/ch08/content">Data delivery(Session 이용)</a></li>
 	</ul>			
 </div>

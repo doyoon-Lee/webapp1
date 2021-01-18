@@ -37,6 +37,28 @@
 						<a class="btn btn-success btn-sm" href="service2">Ch13Service2사용</a>
 					</div>
 				</div>
+				
+				<div class="sector">
+					<h5>XML을 이용한 Setter 주입</h5>
+					<div>
+						<a class="btn btn-success btn-sm" href="service3">Ch13Service3사용</a>
+						<a class="btn btn-success btn-sm" href="service4">Ch13Service4사용</a>
+					</div>
+				</div>
+				
+				<div class="sector">
+					<h5>DAO -> Service -> Controller 주입</h5>
+					<div>
+						<a class="btn btn-success btn-sm" href="service5">Ch13Service5사용</a>
+					</div>
+				</div>
+				
+				<div class="sector">
+					<h5>인터페이스 타입 주입</h5>
+					<div>
+						<a class="btn btn-success btn-sm" href="service6">Ch13Service6사용</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

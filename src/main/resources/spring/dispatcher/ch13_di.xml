@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- 관리 객체로 설정  -->
-	<bean id="ch13Service1"
-		class="com.mycompany.webapp.service.Ch13Service1"/>
+	<!-- XML을 이용한 Setter 주입 -->
+	<!--
+	<bean id="ch13Controller"
+		class="com.mycompany.webapp.controller.Ch13Controller">
+		<property name="service3" ref="ch13Service3"></property>
+		<property name="service4" ref="ch13Service4"></property>
+	</bean>
+	-->
+	
+	<bean id="ch13Controller"
+		class="com.mycompany.webapp.controller.Ch13Controller"
+		p:service3-ref="ch13Service3"
+		p:service4-ref="ch13Service4">
+	</bean>
 </beans>

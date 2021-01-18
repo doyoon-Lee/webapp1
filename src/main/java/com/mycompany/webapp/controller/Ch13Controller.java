@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mycompany.webapp.service.Ch13Service1;
 import com.mycompany.webapp.service.Ch13Service2;
+import com.mycompany.webapp.service.Ch13Service3;
+import com.mycompany.webapp.service.Ch13Service4;
+import com.mycompany.webapp.service.Ch13Service5;
+import com.mycompany.webapp.service.Ch13Service6;
 
 @Controller
 @RequestMapping("/ch13")
@@ -19,11 +23,22 @@ public class Ch13Controller {
 	private static final Logger logger = LoggerFactory.getLogger(Ch13Controller.class);
 	
 	//방법1
-	//@Resource
+	@Resource
 	private Ch13Service1 service1;
 	
-	//@Resource
+	@Resource
 	private Ch13Service2 service2;
+	
+	
+	private Ch13Service3 service3;
+	
+	private Ch13Service4 service4;
+	
+	@Resource
+	private Ch13Service5 service5;
+	
+	@Resource
+	private Ch13Service6 service6;
 	
 	
 	//Constructor-------------------------------
@@ -37,7 +52,7 @@ public class Ch13Controller {
 	
 	//Method------------------------------------
 	//방법3
-	@Autowired
+	/*@Autowired
 	public void setService1(Ch13Service1 service1) {
 		logger.info("실행");
 		this.service1 = service1;
@@ -48,7 +63,21 @@ public class Ch13Controller {
 		logger.info("실행");
 		this.service2 = service2;
 		
+	}*/
+	
+	public void setService3(Ch13Service3 service3) {
+		logger.info("실행");
+		this.service3 = service3;
+		
 	}
+	
+	
+	public void setService4(Ch13Service4 service4) {
+		logger.info("실행");
+		this.service4 = service4;
+		
+	}
+	
 	
 	
 	@GetMapping("/content")
@@ -70,6 +99,34 @@ public class Ch13Controller {
 	public String service2() {
 		logger.info("실행");
 		service2.method();
+		return "redirect:/ch13/content";
+	}
+	
+	@GetMapping("/service3")
+	public String service3() {
+		logger.info("실행");
+		service3.method();
+		return "redirect:/ch13/content";
+	}
+	
+	@GetMapping("/service4")
+	public String service4() {
+		logger.info("실행");
+		service4.method();
+		return "redirect:/ch13/content";
+	}
+	
+	@GetMapping("/service5")
+	public String service5() {
+		logger.info("실행");
+		service5.method();
+		return "redirect:/ch13/content";
+	}
+	
+	@GetMapping("/service6")
+	public String service6() {
+		logger.info("실행");
+		service6.method();
 		return "redirect:/ch13/content";
 	}
 }

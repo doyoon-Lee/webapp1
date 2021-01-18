@@ -2,7 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- XML을 이용한 Setter 주입 -->
 	<!--
@@ -18,4 +20,8 @@
 		p:service3-ref="ch13Service3"
 		p:service4-ref="ch13Service4">
 	</bean>
+	
+	<!-- Properties 파일 설정 -->
+	<!-- <context:property-placeholder 
+		location="classpath:properties/*.properties"/> -->
 </beans>

@@ -59,6 +59,13 @@
 						<a class="btn btn-success btn-sm" href="service6">Ch13Service6사용</a>
 					</div>
 				</div>
+				
+				<div class="sector">
+					<h5>Properties 주입</h5>
+					<div>
+						<a class="btn btn-success btn-sm" href="fileupload">Properties 주입</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

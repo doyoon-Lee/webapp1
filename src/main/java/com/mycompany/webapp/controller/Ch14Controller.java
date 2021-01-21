@@ -30,13 +30,19 @@ public class Ch14Controller {
 	
 	@GetMapping("/conntest")
 	public String conntest() {
+		
 		try {
+			//커넥션풀에서 커넥션 대여
 			Connection conn = dataSource.getConnection();
 			logger.info("연결 성공");
+			//대여한 커넥션 반납
+			conn.close();
 		} catch (SQLException e) {
 			logger.info("연결 실패");
 			e.printStackTrace();
-		}		
+		}	finally {
+			
+		}
 		return "ch14/content";
 	}
 	

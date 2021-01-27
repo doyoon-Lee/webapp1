@@ -12,6 +12,7 @@ import com.mycompany.webapp.dao.Ch14BoardDao;
 import com.mycompany.webapp.dao.Ch14EmployeeDao;
 import com.mycompany.webapp.dto.Ch14Board;
 import com.mycompany.webapp.dto.Ch14Employee;
+import com.mycompany.webapp.dto.Ch14Pager;
 
 @Service
 public class Ch14BoardService {
@@ -24,5 +25,40 @@ public class Ch14BoardService {
 	public List<Ch14Board> getBoardList() {
 		List<Ch14Board> list = boardDao.selectAll();
 		return list;
+	}
+	
+	public List<Ch14Board> getBoardList(Ch14Pager pager) {
+		List<Ch14Board> list = boardDao.selectByPage(pager);
+		return list;
+	}
+	
+	public void saveBoard(Ch14Board board) {
+		boardDao.insert(board);
+	}
+
+	public int getTotalRows() {
+		int totalRows = boardDao.countAll();
+		return totalRows;
+		/*boardDao.countAll();
+		return boardDao.countAll();*/
+	}
+
+	public Ch14Board getBoard(int bno) {
+		Ch14Board board = boardDao.selectByPk(bno);
+		return board;
+	}
+
+	public void updateBoard(Ch14Board board) {
+		boardDao.update(board);
+	}
+
+	public void deleteBoard(int bno) {
+		boardDao.delete(bno);
+		
+	}
+
+	public void addHitcount(int bno) {
+		boardDao.updateHitcount(bno);
+		
 	}
 }

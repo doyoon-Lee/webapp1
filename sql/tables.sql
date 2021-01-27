@@ -8,7 +8,7 @@ create table boards (
     bno                     number(5)       primary key,
     btitle                  varchar(1000)   not null,
     bcontent                clob            not null,
-    brwiter                 varchar(20)     references members(mid) on delete cascade,
+    bwriter                 varchar(20)     references members(mid) on delete cascade,
     bdate                   date            not null,
     bhitcount               number(5)       not null,
     battachsname     varchar(100)    null,
